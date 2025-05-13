@@ -1,12 +1,12 @@
 package com.example.search.data.model
 
 data class Meal(
-    val dateModified: Any,
+    val dateModified: String?,
     val idMeal: String,
     val strArea: String,
     val strCategory: String,
-    val strCreativeCommonsConfirmed: Any,
-    val strImageSource: Any,
+    val strCreativeCommonsConfirmed: String?,
+    val strImageSource: String?,
     val strIngredient1: String,
     val strIngredient10: String,
     val strIngredient11: String,
@@ -29,7 +29,7 @@ data class Meal(
     val strIngredient9: String,
     val strInstructions: String,
     val strMeal: String,
-    val strMealAlternate: Any,
+    val strMealAlternate: String?,
     val strMealThumb: String,
     val strMeasure1: String,
     val strMeasure10: String,

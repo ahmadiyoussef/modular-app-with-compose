@@ -1,5 +1,9 @@
 package com.example.search.data.model
 
 data class RecipeResponse(
-    val meals: List<Meal>
+    val meals: List<Meal> ? = null
+)
+
+data class RecipeDetailResponse(
+    val meals: List<Meal> ? = null
 )
