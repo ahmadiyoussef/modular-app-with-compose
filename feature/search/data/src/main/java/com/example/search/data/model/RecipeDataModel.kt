@@ -1,6 +1,6 @@
 package com.example.search.data.model
 
-data class Meal(
+data class RecipeDataModel(
     val dateModified: String?,
     val idMeal: String,
     val strArea: String,
