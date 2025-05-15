@@ -7,5 +7,5 @@ interface SearchRepository {
 
     suspend fun getRecipes(s: String): Result<List<RecipeDomainModel>>
 
-    suspend fun getRecipeDetail(id: String): Result<List<RecipeDetails>>
+    suspend fun getRecipeDetail(id: String): Result<RecipeDetails>
 }
