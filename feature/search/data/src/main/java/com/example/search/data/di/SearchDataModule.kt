@@ -1,6 +1,8 @@
 package com.example.search.data.di
 
 import com.example.search.data.remote.SearchApiService
+import com.example.search.data.repository.SearchRepositoryImpl
+import com.example.search.domain.repository.SearchRepository
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
@@ -26,4 +28,8 @@ object SearchDataModule {
     @Provides
     fun provideSearchApiService(retrofit: Retrofit): SearchApiService =
         retrofit.create(SearchApiService::class.java)
+
+
+    @Provides
+    fun provideSearchRepo(searchApiService: SearchApiService): SearchRepository = SearchRepositoryImpl(searchApiService)
 }
