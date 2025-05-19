@@ -31,5 +31,6 @@ object SearchDataModule {
 
 
     @Provides
-    fun provideSearchRepo(searchApiService: SearchApiService): SearchRepository = SearchRepositoryImpl(searchApiService)
+    fun provideSearchRepo(searchApiService: SearchApiService): SearchRepository =
+        SearchRepositoryImpl(searchApiService)
 }
