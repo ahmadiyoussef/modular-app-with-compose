@@ -13,7 +13,6 @@ import javax.inject.Inject
 class GetAllRecipeUseCase @Inject constructor(private val searchRepository: SearchRepository) {
 
     operator fun invoke(q: String) = flow<Resource<List<RecipeDomainModel>>> {
-
         emit(Resource.Loading())
         val response = searchRepository.getRecipes(q)
         if (response.isSuccess) {

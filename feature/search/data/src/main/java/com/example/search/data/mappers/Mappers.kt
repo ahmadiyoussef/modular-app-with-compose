@@ -3,7 +3,6 @@ package com.example.search.data.mappers
 import com.example.search.data.model.RecipeDataModel
 import com.example.search.domain.model.RecipeDetails
 import com.example.search.domain.model.RecipeDomainModel
-import kotlin.contracts.Returns
 
 fun List<RecipeDataModel>.toDomain(): List<RecipeDomainModel> = map{
     RecipeDomainModel(

@@ -8,11 +8,9 @@ import com.example.search.domain.repository.SearchRepository
 
 class SearchRepositoryImpl(
     private val searchApiService: SearchApiService
-
 ) : SearchRepository {
 
     override suspend fun getRecipes(s: String): Result<List<RecipeDomainModel>> {
-
         return try {
             val response = searchApiService.getRecipes(s)
             if (response.isSuccessful) {
@@ -26,7 +24,6 @@ class SearchRepositoryImpl(
         } catch (e: Exception) {
             Result.failure(e)
         }
-
     }
 
     override suspend fun getRecipeDetail(id: String): Result<RecipeDetails> {
