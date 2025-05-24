@@ -8,7 +8,7 @@ import retrofit2.http.Query
 
 interface SearchApiService {
 
-    //https://themealdb.com/api/json/v1/1/search.php?s=chicken
+
     @GET("api/json/v1/1/search.php")
     suspend fun getRecipes(
         @Query("s") s:String
@@ -16,7 +16,6 @@ interface SearchApiService {
 
     @GET("api/json/v1/1/lookup.php")
     suspend fun getRecipeDetail(
-
         @Query("i") i:String
     ): Response<RecipeDetailResponse>
 }
